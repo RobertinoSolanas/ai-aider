@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetris</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #222;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        #game-container {
+            display: flex;
+            gap: 20px;
+        }
+        #tetris {
+            border: 2px solid #444;
+            background: #111;
+        }
+        #info-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #next-piece {
+            border: 2px solid #444;
+            background: #111;
+            width: 100px;
+            height: 100px;
+        }
+        .score-display {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div id="info-panel">
+            <div class="score-display">Score: <span id="score">0</span></div>
+            <div class="score-display">Level: <span id="level">1</span></div>
+            <div>Next Piece:</div>
+            <canvas id="next-piece" width="100" height="100"></canvas>
+        </div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
